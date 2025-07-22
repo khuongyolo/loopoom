@@ -1,0 +1,357 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logo i {
+    font-size: 3rem;
+    color: #fff;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.logo h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.intro-section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.creator-intro {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.95);
+    font-weight: 500;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 400;
+    line-height: 1.6;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.language-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.language-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.language-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover::before {
+    transform: scaleX(1);
+}
+
+.language-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.japanese-card:hover {
+    transform: translateY(-5px);
+    cursor: not-allowed;
+}
+
+.card-icon {
+    margin-bottom: 20px;
+}
+
+.card-icon i {
+    font-size: 3.5rem;
+    color: #667eea;
+}
+
+.language-card h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.language-card p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-arrow {
+    margin-top: 10px;
+}
+
+.card-arrow i {
+    font-size: 1.2rem;
+    color: #667eea;
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover .card-arrow i {
+    transform: translateX(10px);
+}
+
+.coming-soon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+}
+
+.japanese-card {
+    opacity: 0.7;
+    position: relative;
+}
+
+/* Support Message */
+.support-message {
+    display: flex;
+    justify-content: center;
+}
+
+.support-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.support-card i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.support-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.support-card p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+}
+
+.footer i {
+    color: #ff6b6b;
+    margin: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header {
+        margin-bottom: 40px;
+        padding: 20px 0;
+    }
+    
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .logo i {
+        font-size: 2.5rem;
+    }
+    
+    .intro-section {
+        max-width: 100%;
+    }
+    
+    .creator-intro {
+        font-size: 1.2rem;
+        padding: 18px 25px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        padding: 20px 25px;
+    }
+    
+    .language-selection {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .language-card {
+        padding: 30px 20px;
+    }
+    
+    .language-card h2 {
+        font-size: 1.6rem;
+    }
+    
+    .language-card p {
+        font-size: 1rem;
+    }
+    
+    .support-card {
+        padding: 30px 20px;
+    }
+    
+    .support-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .support-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .logo i {
+        font-size: 2rem;
+    }
+    
+    .creator-intro {
+        font-size: 1.1rem;
+        padding: 15px 20px;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+        padding: 18px 20px;
+    }
+    
+    .card-icon i {
+        font-size: 3rem;
+    }
+    
+    .language-card h2 {
+        font-size: 1.4rem;
+    }
+    
+    .support-card {
+        margin: 0 10px;
+    }
+}
+
+/* Animation for smooth loading */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.language-card, .support-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.language-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
